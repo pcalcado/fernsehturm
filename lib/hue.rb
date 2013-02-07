@@ -47,16 +47,11 @@ module Colours
     ct: 500
   }
 
-  GREEN = BASE + {
-    hue: 25480,
-    sat: 254
-  }
+  GREEN = BASE + {xy: [0.2096, 0.1238]}
 
-  BLUE = BASE + {
-    xy: [0.2096, 0.1238],
-    ct: 500
-  }
+  BLUE = BASE + {xy: [0.2096, 0.1238]}
 end
+
 
 class App
   attr_reader :name
@@ -145,8 +140,3 @@ class Bridge
   end
 end
 
-app = App.new("test")
-bridge = Bridge.new("10.23.69.143")
-
-#app.connect_to!(bridge)
-#app.change_colours!(1, BRIGHT_RED)
